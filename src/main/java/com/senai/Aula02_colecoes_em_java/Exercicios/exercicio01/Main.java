@@ -14,20 +14,23 @@ public class Main {
 
         scanner.close();
     }
-    public static void menuPrincipal (){
+
+    public static void menuPrincipal() {
         String menu = """
                 ______________________________________
                 | 1. Adicionar Tarefa                |
-                | 2. Listar Taredas                  |
+                | 2. Listar Tarefas                  |
                 | 3. Marcar Tarefa como concluidas   |
                 | 4. Remover Tarefa                  |
                 | 5. Sair                            |
                 |____________________________________|
                 """;
-        System.out.println(menu);
-        int opcaoUser = scanner.nextInt();
-        scanner.nextLine();
+        int opcaoUser;
         do {
+            System.out.println(menu);
+            opcaoUser = scanner.nextInt();
+            scanner.nextLine();
+
             switch (opcaoUser) {
                 case 1:
                     adicionarNovaTarefa();
@@ -51,27 +54,38 @@ public class Main {
                 default:
                     System.out.println("Opção invalida!");
             }
-        }while (opcaoUser <0 && opcaoUser >6);
+        } while (opcaoUser != 5);
     }
 
     public static void adicionarNovaTarefa() {
         System.out.println("Digite uma Tarefa que deseja adicionar");
         String novaTarefa = scanner.nextLine();
-        listaDeTarefas.add(new Tarefa(novaTarefa,false));
+        listaDeTarefas.add(new Tarefa(novaTarefa, false));
+        System.out.println("Tarefa adicionada com sucesso");
     }
 
     public static void listarTarefas() {
-        for (Tarefa tarefa :listaDeTarefas){
-            System.out.println(listaDeTarefas.indexOf(tarefa)+ " - " +tarefa);
+        for (Tarefa tarefa : listaDeTarefas) {
+            System.out.println((listaDeTarefas.indexOf(tarefa) + 1) + " - " + tarefa);
         }
 
     }
 
     public static void marcarTarefaComoConcluida() {
-
+        listarTarefas();
+        System.out.println("Digite o id da tarefa que deseja marcar como concluida");
+        listaDeTarefas.get(scanner.nextInt()-1).statusDeConclusão = true;
+        scanner.nextLine();
+        System.out.println("Tarefa atualizada como concluida");
+        listarTarefas();
     }
 
     public static void removerTarefa() {
+        listarTarefas();
+        System.out.println("Digite o id da tarefa quem voce quer deletar");
+        listaDeTarefas.remove(scanner.nextInt() - 1);
+        scanner.nextLine();
+        System.out.println("Tarefa removida com sucesso");
 
     }
 }
