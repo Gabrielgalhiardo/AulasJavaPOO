@@ -1,4 +1,4 @@
-package com.senai.Aula02_colecoes_em_java.Exercicios.exercicio01;
+package com.senai.Aula02_colecoes_em_java.exercicios.exercicio01;
 
 public class Tarefa {
     String tarefa;

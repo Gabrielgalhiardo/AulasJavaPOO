@@ -1,4 +1,4 @@
-package com.senai.Aula02_colecoes_em_java.Exercicios.exercicio02;
+package com.senai.Aula02_colecoes_em_java.exercicios.exercicio02;
 
 import java.util.Objects;
 

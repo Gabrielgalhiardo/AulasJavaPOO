@@ -1,7 +1,6 @@
-package com.senai.Aula01_classe_atributo_metodos.pessoa;
+package com.senai.aula01_classe_atributo_metodos.pessoa;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {

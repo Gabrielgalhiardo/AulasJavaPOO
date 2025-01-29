@@ -1,4 +1,4 @@
-package com.senai.Aula01_classe_atributo_metodos.carro;
+package com.senai.aula01_classe_atributo_metodos.carro;
 
 public class Concessionaria {
     public static void main(String[] args) {

@@ -1,8 +1,5 @@
-package com.senai.Aula01_classe_atributo_metodos.Exercicios.Exercicio01;
+package com.senai.aula01_classe_atributo_metodos.exercicios.exercicio01;
 
-import com.senai.Aula01_classe_atributo_metodos.Exercicios.Exercicio02.Aluno;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {

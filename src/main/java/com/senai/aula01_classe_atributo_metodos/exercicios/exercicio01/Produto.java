@@ -1,6 +1,4 @@
-package com.senai.Aula01_classe_atributo_metodos.Exercicios.Exercicio01;
-
-import java.util.Scanner;
+package com.senai.aula01_classe_atributo_metodos.exercicios.exercicio01;
 
 public class Produto {
     String nome;

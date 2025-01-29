@@ -1,7 +1,6 @@
-package com.senai.Aula01_classe_atributo_metodos.Exercicios.Exercicio02;
+package com.senai.aula01_classe_atributo_metodos.exercicios.exercicio02;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
