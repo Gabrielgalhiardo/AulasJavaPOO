@@ -25,11 +25,8 @@ public class ContaBancaria {
     }
 
     public double getSaldo() {
+        System.out.println("Saldo: o cliente " + this.usuario.getNome() + " tem saldo de R$:" + saldo);
         return saldo;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
     }
 
     public String getBanco() {
@@ -56,11 +53,30 @@ public class ContaBancaria {
         this.tipos = tipos;
     }
 
-    public double sacar(){
-        return 0.0;
+    public void sacar(double quantidadeSaque) {
+
+        if (saldo  - quantidadeSaque >= 0 && quantidadeSaque >= 0){
+            System.out.println("Saque: R$:" +quantidadeSaque + "\nUsuario: " + this.usuario.getNome());
+            System.out.println("\nSaldo após a transção: " + saldo);
+        }
+        System.out.println("Voce nâo possue saldo suficiente para sacar: " + quantidadeSaque);
+
     }
 
-    public void depositar(double valor){
+    public void depositar(double quantidadeDeposito) {
+        if(quantidadeDeposito > 0){
+            saldo += quantidadeDeposito;
+            System.out.println("Deposito: valor de R$:" + quantidadeDeposito + "\nFoi depositado na conta do usuario: " + this.usuario.getNome());
+            System.out.println("Saldo depois da translação: R$:" + saldo);
+            return;
+        }
+        System.out.println("Quantidade do valor do deposito é abaixo do minino");
+    }
+
+    public void transferir(double valorTransferencia, ContaBancaria contaDestino){
+        System.out.println("Transferencia:\n ");
+        this.sacar(valorTransferencia);
+        contaDestino.depositar(valorTransferencia);
 
     }
 

@@ -10,7 +10,9 @@ public class Produto {
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
+
     }
 
     public double getPreco() {
@@ -18,7 +20,7 @@ public class Produto {
     }
 
     public void setPreco(double preco) {
-        if (preco > 0){
+        if (preco >= 0){
             this.preco = preco;
         }else{
             System.out.println("O numero não pode ser negativo");
