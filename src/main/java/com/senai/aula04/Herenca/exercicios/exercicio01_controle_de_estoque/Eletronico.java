@@ -18,7 +18,7 @@ public class Eletronico extends Produto {
 
     @Override
     public String toString() {
-        String texto = "Nome: " + super.getProduto() + "\nPreço: " + super.getPreco() + "\nQuantidade: " + super.getQuantidade() + "\nVoltagem: " + voltagem;
-        return texto;
+
+        return super.toString() + "\nVoltagem: " + voltagem;
     }
 }

@@ -18,7 +18,7 @@ public class Alimento extends Produto{
 
     @Override
     public String toString() {
-        String texto = "Nome: " + super.getProduto() + "\nPreço: " + super.getPreco() + "\nQuantidade: " + super.getQuantidade() + "\nData de validade: " + dataDeValidade;
-        return texto;
+
+        return super.toString() + "\nData de validade: " + dataDeValidade;
     }
 }
