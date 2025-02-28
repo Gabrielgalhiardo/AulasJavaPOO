@@ -39,11 +39,6 @@ public class Main {
         } while (opcaoUser != 3);
         scanner.close();
 
-
-
-
-
-
     }
 
     public static void cadastrarProduto(){
@@ -51,7 +46,7 @@ public class Main {
             System.out.println("Digite o tipo de produto que deseja cadastrar\nDigite 1 para Alimentos \nDigite 2 para Eletronicos");
             opcaoUser = scanner.nextInt();
             scanner.nextLine();
-        }while (!(opcaoUser > 0 && opcaoUser <= 3));
+        }while (!(opcaoUser > 0 && opcaoUser <= 2));
 
         System.out.print("Digite o nome do produto: ");
         String nomeProduto = scanner.nextLine();

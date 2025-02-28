@@ -55,7 +55,7 @@ public class Main {
                 default:
                     System.out.println("Digite um opção válida");
             }
-        }while (!(opcaoUser > 0 && opcaoUser <= 3));
+        }while (!(opcaoUser > 0 && opcaoUser <= 2));
 
         System.out.print("Digite o numero do pedido: ");
         int numeroDoPedido = scanner.nextInt();

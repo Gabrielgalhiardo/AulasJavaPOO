@@ -4,9 +4,10 @@ public class Funcionarios {
     private String nome;
     private double salario;
 
-    public Funcionarios(double salario, String nome) {
-        this.salario = salario;
+
+    public Funcionarios(String nome, double salario) {
         this.nome = nome;
+        this.salario = salario;
     }
 
     public String getNome() {

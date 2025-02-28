@@ -5,8 +5,8 @@ import java.util.List;
 public class Coordenador extends Funcionarios {
     private List<Professor> equipeDeProfessores = new ArrayList<>();
 
-    public Coordenador(double salario, String nome, List<Professor> equipeDeProfessores) {
-        super(salario, nome);
+    public Coordenador(String nome, double salario, List<Professor> equipeDeProfessores) {
+        super(nome, salario);
         this.equipeDeProfessores = equipeDeProfessores;
     }
 
@@ -16,6 +16,13 @@ public class Coordenador extends Funcionarios {
 
     public void setEquipeDeProfessores(List<Professor> equipeDeProfessores) {
         this.equipeDeProfessores = equipeDeProfessores;
+    }
+
+    @Override
+    public String toString() {
+        return "Coordenador{" +
+                "equipeDeProfessores=" + equipeDeProfessores +
+                '}';
     }
 }
 
