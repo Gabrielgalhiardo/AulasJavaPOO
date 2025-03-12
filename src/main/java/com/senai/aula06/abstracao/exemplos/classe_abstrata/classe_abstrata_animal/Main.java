@@ -1,4 +1,4 @@
-package com.senai.aula06_conceito_de_abstracao.exemplos.animal;
+package com.senai.aula06.abstracao.exemplos.classe_abstrata.classe_abstrata_animal;
 
 import java.util.ArrayList;
 import java.util.List;
