@@ -14,12 +14,14 @@ public class CheckInGol implements CheckIn{
         System.out.println("Documentos validados pela empresa GOl");
     }
 
+
     @Override
-    public void emitirCartaoDeEmbarque() {
-        if (validarBag(peso)){
-            System.out.println("Cartão emitido pela empresa GOL");
-        }else{
-            System.out.println("Bagagem muito pessada,Cartão Recusado pela GOL");
-        }
+    public void emitirCartaoDeEmbarque(double peso) {
+        CheckIn.super.emitirCartaoDeEmbarque(peso);
+        System.out.print("GOL");
+    }
+
+    public double getPeso() {
+        return peso;
     }
 }

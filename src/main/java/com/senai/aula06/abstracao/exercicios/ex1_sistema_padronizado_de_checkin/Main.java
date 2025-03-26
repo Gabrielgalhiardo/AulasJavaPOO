@@ -5,14 +5,15 @@ public class Main {
         testeChekIn(new CheckInGol(11));
         testeChekIn(new CheckInLatam(8));
     }
+
     private static void testeChekIn (CheckIn checkIn){
         CheckIn.mensagemPadrao();
         if (checkIn instanceof CheckInGol checkInGol){
             checkInGol.validacaoDosDocumento();
-            checkInGol.emitirCartaoDeEmbarque();
+            checkInGol.emitirCartaoDeEmbarque(checkInGol.getPeso());
         } else if (checkIn instanceof  CheckInLatam checkInLatam) {
             checkInLatam.validacaoDosDocumento();
-            checkInLatam.emitirCartaoDeEmbarque();
+            checkInLatam.emitirCartaoDeEmbarque(checkInLatam.getPeso());
         }
     }
 }

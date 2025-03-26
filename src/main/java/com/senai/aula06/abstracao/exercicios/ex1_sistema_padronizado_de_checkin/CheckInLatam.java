@@ -14,12 +14,12 @@ public class CheckInLatam implements CheckIn{
     }
 
     @Override
-    public void emitirCartaoDeEmbarque() {
-        if (validarBag(peso)){
-            System.out.println("Cartão emitido pela empresa Latam");
-        }else{
-            System.out.println("Bagagem muito pessada,Cartão Recusado pela Latam");
-        }
+    public void emitirCartaoDeEmbarque(double peso) {
+        CheckIn.super.emitirCartaoDeEmbarque(peso);
+        System.out.print("LATAM");
     }
 
+    public double getPeso() {
+        return peso;
+    }
 }

@@ -9,10 +9,15 @@ public interface CheckIn {
 
     void validacaoDosDocumento();
 
-    void emitirCartaoDeEmbarque();
+    default void emitirCartaoDeEmbarque(double peso){
+        if (validarBag(peso)){
+            System.out.print("Cartão aceito pela empresa: ");
+        }else{
+            System.out.print("Cartão recusado pela empresa: ");
+        }
+    }
 
-
-    default boolean validarBag(double peso){
+    static boolean validarBag(double peso){
         return (PESO_MAXIMO_BAG >= peso);
     }
 }
